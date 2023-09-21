@@ -58,7 +58,7 @@ mean(pull(example_df, vec_logical))
 mean(pull(example_df, vec_character))
 mean(pull(example_df, vec_factor))
 ```
-The mean of random sample and logical vector are 0.1053142 and 0.6.
+The mean of random sample and logical vector are -0.2437425 and 0.3.
 The mean of charactor and factor vector didn't work because arguments are not numeric or logical.
 
 *Explicitly convert variables from one type to another
