@@ -21,7 +21,7 @@ ncol(early_january_weather)
 
 *The mean temperature is 39.58212:
 ```{r}
-mean(early_january_weather$temp)
+mean(early_january_weather $ temp)
 ```
 
 *Make a scatterplot of temp (y) vs time_hour (x):
@@ -58,7 +58,7 @@ mean(pull(example_df, vec_logical))
 mean(pull(example_df, vec_character))
 mean(pull(example_df, vec_factor))
 ```
-The mean of random sample and logical vector are -0.2437425 and 0.3.
+The mean of random sample is `r mean(pull(example_df, samp))`and the mean of logical vector is `rmean(pull(example_df, vec_logical))`.
 The mean of charactor and factor vector didn't work because arguments are not numeric or logical.
 
 *Explicitly convert variables from one type to another
