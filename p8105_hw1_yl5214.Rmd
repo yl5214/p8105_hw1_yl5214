@@ -9,26 +9,26 @@ output: github_document
 
 *This dataset contains 15 variables including origin, year, month, day, hour, temp, dewo, humid, wind_dir, wind_speed, wind_gust, precip, pressure, visib,and time_hour:
 ```{r}
-library(moderndive)
-data("early_january_weather")
+library (moderndive)
+data ("early_january_weather")
 ```
 
 *There are 358 rows and 15 columns in this dataset:
 ```{r}
-nrow(early_january_weather)
-ncol(early_january_weather)
+nrow (early_january_weather)
+ncol (early_january_weather)
 ```
 
 *The mean temperature is 39.58212:
 ```{r}
-mean(early_january_weather $ temp)
+mean (early_january_weather $ temp)
 ```
 
 *Make a scatterplot of temp (y) vs time_hour (x):
 ```{r}
-library(tidyverse)
-ggplot(early_january_weather, aes(x = time_hour, y = temp, color= humid)) + geom_point()
-ggsave(' scatter_plot.pdf', height=4, width=4)
+library (tidyverse)
+ggplot (early_january_weather, aes(x = time_hour, y = temp, color= humid)) + geom_point()
+ggsave (' scatter_plot.pdf', height=4, width=4)
 ```
 As the time goes on from January 1 st to Januray 14, temperature goes through zigzag rise. There is a big drop in temperature after January 14. There is a slight increase in humidity from 40 to 100 between Jan 01 to Jan14 but not so obvious.
 
@@ -53,19 +53,19 @@ example_df
 
 *Take the mean of each variable 
 ```{r}
-mean(pull(example_df, samp))
-mean(pull(example_df, vec_logical))
-mean(pull(example_df, vec_character))
-mean(pull(example_df, vec_factor))
+mean (pull (example_df, samp))
+mean (pull (example_df, vec_logical))
+mean (pull (example_df, vec_character))
+mean (pull (example_df, vec_factor))
 ```
 The mean of random sample is `r mean(pull(example_df, samp))`and the mean of logical vector is `r mean(pull(example_df, vec_logical))`.
 The mean of charactor and factor vector didn't work because arguments are not numeric or logical.
 
 *Explicitly convert variables from one type to another
 ```{r, eval = FALSE}
-as.numeric(pull(example_df, vec_logical))
-as.numeric(pull(example_df, vec_character))
-as.numeric(pull(example_df, vec_factor))
+as.numeric (pull(example_df, vec_logical))
+as.numeric (pull(example_df, vec_character))
+as.numeric (pull(example_df, vec_factor))
 ```
 Logical variables are converted to 1 and 0. Character variables cannot be converted to numerical data so it displays NA. Factor variables are converted to 1,2 and 3.
 Logical variables can be converted to numerical variables, so I can take the mean of logical variables.
