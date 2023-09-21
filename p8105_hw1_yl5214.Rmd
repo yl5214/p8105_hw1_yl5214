@@ -58,14 +58,14 @@ mean (pull (example_df, vec_logical))
 mean (pull (example_df, vec_character))
 mean (pull (example_df, vec_factor))
 ```
-The mean of random sample is `r mean (pull (example_df,samp))`and the mean of logical vector is `r mean (pull(example_df,vec_logical))`.
+The mean of random sample is `r mean (pull (example_df,samp))`and the mean of logical vector is `r mean (pull (example_df,vec_logical))`.
 The mean of charactor and factor vector didn't work because arguments are not numeric or logical.
 
 *Explicitly convert variables from one type to another
 ```{r, eval = FALSE}
-as.numeric ( pull(example_df, vec_logical))
-as.numeric ( pull(example_df, vec_character))
-as.numeric ( pull(example_df, vec_factor))
+as.numeric (pull(example_df, vec_logical))
+as.numeric (pull(example_df, vec_character))
+as.numeric (pull(example_df, vec_factor))
 ```
 Logical variables are converted to 1 and 0. Character variables cannot be converted to numerical data so it displays NA. Factor variables are converted to 1,2 and 3.
 Logical variables can be converted to numerical variables, so I can take the mean of logical variables.
